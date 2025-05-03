@@ -2,7 +2,7 @@
 Smart Order Router across multiple venues
 
 **Dear Blockhouse Hiring Team,**
-Thank you so much for the opportunity to do the case. It was extremely interesting to learn about Rama Cont's and Arseniy Kukanov's paper "Optimal Order Placement in Limit Order Markets. I hope you like the conclusions I drew and how we can improve the code to further extend on their research in stochstic convex optimization. 
+Thank you so much for the opportunity to do the case. It was extremely interesting to learn about Rama Cont's and Arseniy Kukanov's paper "Optimal Order Placement in Limit Order Markets." I hope you like the conclusions I drew and how we can improve the code to further extend on their research in stochstic convex optimization. 
 
 To start the case, I read the case and looked at the data. In the case, we were asked to implement a backtester that can tune the hyperparameters Lambda_under, Lambda_over, and Theta_queue. These parameters as Cont and Kukanov explain are "Implicit execution costs." I implemented the code in pseudocode.txt and then tried to build a backtester that could find the best hyper parameters. 
 
