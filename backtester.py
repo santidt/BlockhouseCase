@@ -4,6 +4,7 @@ import math
 import json
 #I imported matplotlib for the plot
 import matplotlib.pyplot as plt
+import matplotlib.ticker as mtick
 
 
 #Santiago Diaz Tolivia
@@ -412,10 +413,18 @@ def backtest_static_router(data,parent_order=5000,n_grid=7):
     plt.ylabel("Cumulative cost ($)")
     plt.title("Cumulative Execution Cost")
     plt.grid(True)
+
+    # get the Axes and turn off scientific notation
+    ax = plt.gca()
+    ax.ticklabel_format(style='plain', axis='y')
+
+    # format y‐ticks as dollars
+    ax.yaxis.set_major_formatter(mtick.StrMethodFormatter('${x:,.0f}'))
+
     plt.tight_layout()
-    plt.savefig("results.png", dpi=150)  # or "results.pdf"
+    plt.savefig("results.png", dpi=150)
     plt.close()
-    print("Cumulative‑cost plot written to results.png")
+    print("Cumulative-cost plot written to results.png")
 
 
     #baselines using their individual functions one pass each
