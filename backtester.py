@@ -293,7 +293,7 @@ def allocate(order_size, venues, lambda_over, lambda_under, theta_queue):
     #return the best split for the snapshot and the lowest cost
     return best_split, best_cost
 
-
+################## Backtester and implementation ##################
 
 def backtest_static_router(data,parent_order=5000,n_grid=7):
     '''Static Backtester, takes the data, the order size and the number of iterations'''
