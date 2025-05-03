@@ -443,18 +443,22 @@ def backtest_static_router(data,parent_order=5000,n_grid=7):
             "lambda_under": best_params[1],
             "theta_queue" : best_params[2],
         },
-        "total_cost"   : tuned_cost,
+
+        "total_cost_smart_order_router"   : tuned_cost,
         "average_price": tuned_avg,
+
         "best_ask": {
             "total_cost"  : best_ask_cost,
             "average_price": best_ask_avg,
             "bps_savings" : bps_saving(best_ask_cost)
         },
+
         "twap": {
             "total_cost"  : twap_cost,
             "average_price": twap_avg,
             "bps_savings" : bps_saving(twap_cost)
         },
+
         "vwap": {
             "total_cost"  : vwap_cost,
             "average_price": vwap_avg,
@@ -474,7 +478,7 @@ if __name__ == "__main__":
 
     #run backtest and keep json output
     t0 = time.perf_counter()
-    backtest_static_router(df_different_venues)
+    backtest_static_router(df)
     dt = time.perf_counter() - t0
 
     #print time it took to run
